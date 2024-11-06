@@ -17,7 +17,7 @@ You can use three ways for this workshop:
 
 from Wikipedia [Linux - Wikipedia](https://en.wikipedia.org/wiki/Linux)
 
-![image-20241105134813245](C:\Users\cx264\OneDrive - University of Cambridge\2024Fall\CSC\Repository\Linux101\image-20241105134813245.png)
+[Linux101/image-20241105134813245.png at main · chongjing/Linux101](https://github.com/chongjing/Linux101/blob/main/image-20241105134813245.png)
 
 #### 1.2 Why Linux?
 
