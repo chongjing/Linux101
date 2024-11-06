@@ -176,7 +176,7 @@ Parameters for `chmod`:
 User		Type		 Rights
 u - user	+ add		r - read
 g - group	- delete	w - write
-o - others				x - execute
+o - others			x - execute
 a - all
 ```
 
