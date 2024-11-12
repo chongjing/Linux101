@@ -174,7 +174,7 @@ Parameters for `chmod`:
 User		Type		 Rights
 u - user	+ add		r - read
 g - group	- delete	w - write
-o - others				x - execute
+o - others			x - execute
 a - all
 ```
 
@@ -352,31 +352,31 @@ Regular expressions, often abbreviated as "regex" or "regexp," are sequences of 
 
 ```bash
 Search Pattern 		Target String
-(DNA|RNA) 			Search for “DNA” or “RNA”.
-(D|R)NA 			Search for “DNA” or “RNA”.
-[tmr]RNA 			Search for “tRNA”, “mRNA”, or “rRNA”.
-*omics 				Search for “Genomics”, or “Proteomics”, or any other “nomics”.
-b.g 				Matches any character between “b” and “g”, like big, bug, bag...
-[a-zA-Z] 			Matches any single lowercase or uppercase character.
-[˜ a-zA-Z0-9] 		Matches any single character which is not a number or letter.
-ˆ[eE]nzyme 			Matches the words “Enzyme” or “enzyme” at the beginning of a line.
-[eE]nzyme$ 			Matches the words “Enzyme” or “enzyme” at the end of a line.
-. 					Matches any single character except the newline character.
-[ ] 				Matches any character listed between the brackets. 
-[ˆ] 				Matches any character except those listed between the brackets.
-[0–9] 				The dash (–) indicates a range of consecutive characters. 
-? 					Matches the preceding character or list zero or one time.
-* 					Matches the preceding character or list zero or more times.
-+ 					Matches the preceding character or list one or more times.
-{num} 				Matches the preceding character or list num times.
-{num,} 				Matches the preceding character or list at least num times.
-{min,max} 			Matches the preceding character or list at least min times, but not more than max times. 
-ˆ 					Matches the start of a line.
-$ 					Matches the end of a line.
-\ < 				Matches the beginning of a word.
-\ > 				Matches the end of a word.
-\b 					Matches the beginning or the end of a word.
-\B 					Matches any character not at the beginning or end of a word.
+(DNA|RNA) 		Search for “DNA” or “RNA”.
+(D|R)NA 		Search for “DNA” or “RNA”.
+[tmr]RNA 		Search for “tRNA”, “mRNA”, or “rRNA”.
+*omics 			Search for “Genomics”, or “Proteomics”, or any other “nomics”.
+b.g 			Matches any character between “b” and “g”, like big, bug, bag...
+[a-zA-Z] 		Matches any single lowercase or uppercase character.
+[˜ a-zA-Z0-9] 	        Matches any single character which is not a number or letter.
+ˆ[eE]nzyme 		Matches the words “Enzyme” or “enzyme” at the beginning of a line.
+[eE]nzyme$ 		Matches the words “Enzyme” or “enzyme” at the end of a line.
+. 			Matches any single character except the newline character.
+[ ] 			Matches any character listed between the brackets. 
+[ˆ] 			Matches any character except those listed between the brackets.
+[0–9] 			The dash (–) indicates a range of consecutive characters. 
+? 		        Matches the preceding character or list zero or one time.
+* 		        Matches the preceding character or list zero or more times.
++ 		        Matches the preceding character or list one or more times.
+{num} 			Matches the preceding character or list num times.
+{num,} 			Matches the preceding character or list at least num times.
+{min,max} 		Matches the preceding character or list at least min times, but not more than max times. 
+ˆ 			Matches the start of a line.
+$ 			Matches the end of a line.
+\ < 			Matches the beginning of a word.
+\ > 			Matches the end of a word.
+\b 			Matches the beginning or the end of a word.
+\B 			Matches any character not at the beginning or end of a word.
 ```
 
 Let's take an example, suppose we want to get positions of all genes from `NIP-T2T.gff3`, following a `bed` format (here is a description of `bed` format [BED File Format](https://grch37.ensembl.org/info/website/upload/bed.html)):
