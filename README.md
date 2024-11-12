@@ -102,8 +102,6 @@ The character `>` redirects the output of the command date into a file which is 
   ./mycode.sh > out
   ```
 
-  
-
 - **`#`**: Comment out of code, to make comments in your script.
 
 - **`history`**: list your most recent commands.
@@ -404,6 +402,13 @@ done
 for i in 1 2 3 4 5;  do echo $i; done
 ```
 
+Case: suppose you have 20 sample to process, you want make directory and save processed results for each of them
+
+```bash
+for i in {01..20}; do echo processing sample_${i}; mkdir sample_${i} && cd sample_${i} && echo completed sample_${i} && cd ..; done
+# do not forget `cd ..`
+```
+
 
 
 - **`while` loop:** The `while` loop is used to execute a block of code as long as a certain condition is true. Here is an example that prints the numbers 1 to 5:
@@ -430,6 +435,8 @@ do
 done
 ```
 
+
+
 - **`while read` loop:** The `while read` loop is used to read input from a file or command and execute a block of code for each line of input. Here is an example that reads lines from a file named `file.txt`:
 
 ```
@@ -440,7 +447,20 @@ done < file.txt
 ```
 
 ```
-while read line;  do echo $line; done < file.txt
+while read line; do echo $line; done < file.txt
+```
+
+Case: suppose you have a list of gene of your interest, you need to get position information from a .bed file. You can do:
+
+```bash
+$ cat mygene.list
+AGIS_Os01g004820
+AGIS_Os01g005690
+AGIS_Os01g016990
+AGIS_Os01g022830
+AGIS_Os02g018710
+
+$ while read line; do awk -v gene=$line '$4 == gene {print $0}' NIP-T2T.gene.bed; done < mygene.list
 ```
 
 
@@ -487,7 +507,11 @@ $ echo $HOME
 ```
 - To set an environment variable:
 ```bash
-$ export VARIABLE_NAME=value
+$ which cellranger
+# cellranger not found
+$ export PATH=/rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0/:$PATH
+$ which cellranger
+# /rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0//cellranger
 ```
 - To unset an environment variable:
 ```bash
@@ -511,6 +535,7 @@ num=$((RANDOM % 100 + 1))
 # Use read to prompt the user to guess the number.
 # Use if to compare the user's guess with the generated number: -eq (equal), -ne (not equal),
 # -gt (greater than), -ge (greater than or equal to), -lt (less than), -le (less than or equal to).
+
 while :
 do 
  read -p "The computer has generated a random number between 1 and 100. Take a guess: " guess
@@ -528,6 +553,8 @@ done
 ```
 
 ### **<u>Now, you've got 80% Linux knowledge, what's next?</u>**
+
+***- a textbook***: [Computational Biology: A Practical Introduction to BioData Processing and Analysis with Linux, MySQL, and R | SpringerLink | by Röbbe Wünschiers](https://link.springer.com/book/10.1007/978-3-642-34749-8)
 
 ***- ChatGPT***: [ChatGPT](https://chatgpt.com/)
 
