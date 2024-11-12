@@ -83,7 +83,7 @@ The character `>` redirects the output of the command date into a file which is 
 
   ```bash
   #!/bin/bash
-  sample_name = "Nematode1"
+  sample_name="Nematode1"
   echo "Start Processing ${sample_name}"
   echo "Step1: Starting Quality Control"
   date
