@@ -552,7 +552,7 @@ do
 done
 ```
 
-### **<u>Now, you've got 80% Linux knowledge, what's next?</u>**
+### **<u>Congrats, you've got 80% Linux knowledge, what's next?</u>**
 
 ***- a textbook***: [Computational Biology: A Practical Introduction to BioData Processing and Analysis with Linux, MySQL, and R | SpringerLink | by Röbbe Wünschiers](https://link.springer.com/book/10.1007/978-3-642-34749-8)
 
