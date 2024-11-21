@@ -1,6 +1,6 @@
 # Linux 101
 
-This is a workshop on basics of Linux commands, specifically for those with no any experience on Linux or Computing Clusters.
+This is a workshop on basics of Linux commands, specifically for those with no any experience on Linux, `bash` Shell or Computing Clusters.
 
 
 
@@ -87,7 +87,7 @@ The character `>` redirects the output of the command date into a file which is 
 
   ```bash
   #!/bin/bash
-  sample_name = "Nematode1"
+  sample_name="Nematode1"
   echo "Start Processing ${sample_name}"
   echo "Step1: Starting Quality Control"
   date
@@ -555,6 +555,7 @@ do
     fi
 done
 ```
+
 
 
 
