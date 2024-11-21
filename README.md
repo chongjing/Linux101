@@ -574,7 +574,7 @@ done
 
 
 
-### ###6. Notes
+### 6. Notes
 
 a, programming languages
 
