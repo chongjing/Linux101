@@ -10,8 +10,6 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 - [Notes]([Editing Linux101/README.md at main · chongjing/Linux101](https://github.com/chongjing/Linux101/edit/main/README.md#6-notes))
 
-
-
 ### 0. Set-up
 
 You can use three ways for this workshop:
