@@ -8,7 +8,7 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 \## Table of Contents 
 
-- [Notes](###6. Notes)
+- [Notes](##6. Notes)
 
 
 
@@ -574,7 +574,7 @@ done
 
 
 
-### 6. Notes
+### ###6. Notes
 
 a, programming languages
 
