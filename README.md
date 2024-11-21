@@ -8,7 +8,7 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 \## Table of Contents 
 
-- [Notes](##6. Notes)
+- [Notes]([Editing Linux101/README.md at main · chongjing/Linux101](https://github.com/chongjing/Linux101/edit/main/README.md#6-notes))
 
 
 
