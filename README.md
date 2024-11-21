@@ -8,7 +8,9 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 \## Table of Contents 
 
-- [Notes](https://github.com/chongjing/Linux101?tab=readme-ov-file#6-notes)
+- 
+- [4. Program Management](https://github.com/chongjing/Linux101?tab=readme-ov-file#5progam-management)
+- [5. Notes](https://github.com/chongjing/Linux101?tab=readme-ov-file#6-notes)
 
 ### 0. Set-up
 
@@ -563,7 +565,7 @@ done
 
 
 
-### 5.Progam Management
+### 4.Progam Management
 
 - Pre-compiled binaries
 - Source code
@@ -572,7 +574,7 @@ done
 
 
 
-### 6. Notes
+### 5. Notes
 
 a, programming languages
 
