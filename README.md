@@ -6,9 +6,11 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 [TOC]
 
--[0. Set-up](###0. Set-up)
+\## Table of Contents 
 
-- [5.Program Management](##5.Program Management)
+- [Notes](##6.Notes)
+
+
 
 ### 0. Set-up
 
