@@ -8,7 +8,10 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 \## Table of Contents 
 
-- 
+- [0. Set-up]
+- [1. Linux Basics]
+- [2. Files]
+- [3. Bash Programming]
 - [4. Program Management](https://github.com/chongjing/Linux101?tab=readme-ov-file#5progam-management)
 - [5. Notes](https://github.com/chongjing/Linux101?tab=readme-ov-file#6-notes)
 
@@ -21,7 +24,7 @@ You can use three ways for this workshop:
 - WSL2: install WSL2 in Windows 11, https://learn.microsoft.com/en-us/windows/wsl/install
 - MacOS: nothings need to do, good to go - Open Terminal
 
-### 1. Linux basics
+### 1. Linux Basics
 
 #### 1.1 What is Linux?
 
