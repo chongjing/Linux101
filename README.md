@@ -8,7 +8,7 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 -[0. Set-up](###0. Set-up)
 
-[5.Program Management](###5.Program Management)
+- [5.Program Management](##5.Program Management)
 
 ### 0. Set-up
 
