@@ -8,7 +8,7 @@ This is a workshop on basics of Linux commands, specifically for those with no a
 
 \## Table of Contents 
 
-- [Notes]([Editing Linux101/README.md at main · chongjing/Linux101](https://github.com/chongjing/Linux101/edit/main/README.md#6-notes))
+- [Notes]([chongjing/Linux101: Linux Workshop](https://github.com/chongjing/Linux101?tab=readme-ov-file#6-notes))
 
 ### 0. Set-up
 
