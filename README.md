@@ -2,6 +2,10 @@
 
 This is a workshop on basics of Linux commands, specifically for those with no any experience on Linux or Computing Clusters.
 
+
+
+[TOC]
+
 ### 0. Set-up
 
 You can use three ways for this workshop:
@@ -518,7 +522,7 @@ $ which cellranger
 $ unset VARIABLE_NAME
 ```
 
-### 4. A Bash Command Game
+#### 3.6. A Bash Command Game
 
 ```
 #!/bin/bash
@@ -552,7 +556,26 @@ do
 done
 ```
 
-### **<u>Now, you've got 80% Linux knowledge, what's next?</u>**
+
+
+### 5.Progam Management
+
+- Pre-compiled binaries
+- Source code
+- Bioconda - be aware of the license
+- Containers - Docker and Singularity
+
+
+
+### 6.Notes
+
+a, programming languages
+
+> "There are a number of such languages that are popular in bioinformatics (and in biology in general). This includes the eponymous scripting language of the GNU `bash` shell itself, `Python` and `R`. Each of these have their own strengths and weaknesses. `Bash` is ubiquitous and powerful but has a cumbersome syntax and is only really convenient for short programs. `Python` is a general purpose language with a very friendly syntax, and is nearly as ubiquitous as `Bash`. However, its ecosystem for bioinformatics analyses is relatively limited. `R` is not as prevalent as the other two but is excellent for manipulating and analyzing large amounts of data. Furthermore, it is the language of choice for bioinformatics analysis due to the large number of packages and tools it supports in this regard—especially for ‘-omics’ analyses through the Bioconductor ecosystem."   --from Raghavan et al. 20022. https://doi.org/10.1093/bib/bbab563
+
+
+
+### **<u>Congrats, you've got 80% Linux knowledge, what's next?</u>**
 
 ***- a textbook***: [Computational Biology: A Practical Introduction to BioData Processing and Analysis with Linux, MySQL, and R | SpringerLink | by Röbbe Wünschiers](https://link.springer.com/book/10.1007/978-3-642-34749-8)
 
