@@ -2,18 +2,14 @@
 
 This is a workshop on basics of Linux commands, specifically for those with no any experience on Linux, `bash` Shell or Computing Clusters.
 
+## Table of Contents 
 
-
-[TOC]
-
-\## Table of Contents 
-
-- [0. Set-up]
-- [1. Linux Basics]
-- [2. Files]
-- [3. Bash Programming]
-- [4. Program Management](https://github.com/chongjing/Linux101?tab=readme-ov-file#5progam-management)
-- [5. Notes](https://github.com/chongjing/Linux101?tab=readme-ov-file#6-notes)
+- [0. Set-up](https://github.com/chongjing/Linux101?tab=readme-ov-file#0-set-up)
+- [1. Linux Basics](https://github.com/chongjing/Linux101?tab=readme-ov-file#1-linux-basics)
+- [2. Files](https://github.com/chongjing/Linux101?tab=readme-ov-file#2-files)
+- [3. Bash Programming](https://github.com/chongjing/Linux101?tab=readme-ov-file#3-bash-programming)
+- [4. Program Management](https://github.com/chongjing/Linux101?tab=readme-ov-file#4progam-management)
+- [5. Notes](https://github.com/chongjing/Linux101?tab=readme-ov-file#5-notes)
 
 ### 0. Set-up
 
