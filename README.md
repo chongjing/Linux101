@@ -532,7 +532,7 @@ $ unset VARIABLE_NAME
 ```
 #!/bin/bash
 
-# Chongjing Xia, 20241106, cx264@cam.ac.uk
+# Chongjing Xia, 20241106, xiachongjing@gmail.com
 # The script generates a random number between 1 and 100 and prompts the user to guess the number.
 # Based on the user's input, it informs whether the guess is correct, too low, or too high,
 # and continues until the user guesses correctly.
