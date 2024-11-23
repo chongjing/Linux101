@@ -293,13 +293,13 @@ To replace a string using `vi` in Linux, you can use the substitute command. Her
 - `[flags]`: Specifies optional flags that modify the behavior of the substitute command. For example, you can use the "g" flag to replace all occurrences of the pattern on each line.
 - `[count]`: Specifies how many occurrences of the pattern to replace on each line. If you omit this parameter, `vi` will replace all occurrences.
 
-Here is an example of how to replace all occurrences of "Nematode1" with "Nematode1" in `mycode.sh`:
+Here is an example of how to replace all occurrences of "Nematode2" with "Nematode3" in `mycode.sh`:
 
 ```
-:%s/Nematode1/Nematode1/g
+:%s/Nematode2/Nematode3/g
 ```
 
-This command replaces all occurrences of "foo" with "bar" in the entire file.
+This command replaces all occurrences of "Nematode2" with "Nematode3" in the entire file.
 
 
 
