@@ -2,7 +2,7 @@
 
 This is a workshop on basics of Linux commands, specifically for those with no any experience on Linux, `bash` Shell or Computing Clusters.
 
-## Table of Contents 
+## Table of Contents
 
 - [0. Set-up](https://github.com/chongjing/Linux101?tab=readme-ov-file#0-set-up)
 - [1. Linux Basics](https://github.com/chongjing/Linux101?tab=readme-ov-file#1-linux-basics)
@@ -33,23 +33,23 @@ from Wikipedia [Linux - Wikipedia](https://en.wikipedia.org/wiki/Linux)
 from Microsoft Copilot:
 
 > Why computing servers and clusters usually use Linux system?
->
+> 
 > **Open Source**: Linux is open-source, which means that its source code is freely available for anyone to inspect, modify, and enhance. This allows for greater customization and flexibility.
->
+> 
 > **Stability and Reliability**: Linux systems are known for their stability and reliability. They can run for years without requiring a reboot, which is crucial for servers that need to be operational 24/7.
->
+> 
 > **Security**: Linux is considered more secure than other operating systems. The open-source nature allows for continuous auditing and quick patching of vulnerabilities. Additionally, its permission and user management systems are robust.
->
+> 
 > **Performance**: Linux can be optimized for performance. It efficiently manages system resources and can handle a large number of simultaneous connections, making it ideal for high-performance computing environments.
->
+> 
 > **Scalability**: Linux can scale from a single server to a vast cluster of servers. It's used in various scales of computing, from small embedded systems to supercomputers.
->
+> 
 > **Cost**: Since Linux is open-source, it is free to use. This reduces the overall cost for businesses and research institutions compared to proprietary operating systems that require licenses.
->
+> 
 > **Compatibility**: Linux supports a wide range of hardware, from the oldest to the latest, making it highly versatile. Many scientific and technical applications are designed to run on Linux.
->
+> 
 > **Community Support**: There is a large and active community of developers and users who contribute to Linux's development and offer support. This community-driven approach leads to continuous improvements and innovations.
->
+> 
 > **Automation and Scripting**: Linux has powerful command-line tools and scripting capabilities, which are essential for automating administrative tasks and managing large clusters efficiently.
 
 #### 1.3 Basic Commands:
@@ -74,22 +74,31 @@ $ cat date.txt
 The character `>` redirects the output of the command date into a file which is named `date.txt`. If it does not exist, this file is created automatically. Otherwise, it will be overwritten. You could use `>>”`to append the output to an existing file. Of course, since the output is redirected, you do not see the result. 
 
 - **`pwd`:** Prints the current working directory.
+
 - **`ls`:** Lists the contents of a directory.
+
 - **`mkdir`:** Creates a new directory.
+
 - **`cd`:** Changes the current working directory.
+
 - **`.`:** Represents the current directory.
+
 - **`../`:** Represents the parent directory.
+
 - **`~`:** Represents the home directory of the current user.
+
 - **`cp`:** Copies files or directories.
+
 - **`mv`:** Moves or renames files or directories.
+
 - **`rm`:** Removes files or directories.
 
 - **`echo`**: Prints text to the terminal window
 
 - **`touch`**: Creates a file
-
+  
   Now let's use an simple script, save bellow code to `mycode.sh`. 
-
+  
   ```bash
   #!/bin/bash
   sample_name="Nematode1"
@@ -99,13 +108,13 @@ The character `>` redirects the output of the command date into a file which is 
   echo "Step1 Completed"
   touch step1.done
   ```
-
+  
   Run: `./mycode.sh`, you will get error - no permission. To change permission: `chmod u+x mycode.sh`.
 
 - **`>`:** Redirects standard output to a file. If the file already exists, it will be overwritten.
 
 - **`>>`:** Redirects standard output to a file. If the file already exists, the output will be appended to the end of the file.
-
+  
   ```bash
   ./mycode.sh
   ./mycode.sh > out
@@ -133,8 +142,6 @@ ls -hl: list long format with readable file size
 alias ll='ls -hl'
 ```
 
-
-
 ### 2. Files
 
 Some notes:
@@ -161,12 +168,15 @@ The following list describes the individual file attributes in more detail:
 - Type: The first character indicates whether the item is a directory (d), a normal file (-), a block-oriented device (b), a character-oriented device (c) or a link (l). Actually, a directory is a special type of file. The same holds for the special directories “.” and “..”
 
 - Access Modes: The access modes or permissions specify three types of users who are either allowed to read (r), write (w), or execute (x) the file. The first block of 3 characters indicates your own rights, the next block of 3 characters the group’s rights, and the last block of 3 characters the right for any user. The dash character (-) means that the respective permission is not set.
+
 - Number of Links: the number of links or references to this file or folder. By default, there are two links to directory and one link to files. Any subdirectory increases the number of directory links by one.
 
 - Owner: The user who created the file or directory, can be changed by `chown`.
+
 - Group: This item shows to which group the file or directory belongs. The group ownership
   can be changed with the command `chgrp`.
   Size: he size of the file or directory.
+
 - Modification Date and Time: the date and system time when the file was last modified
 
 To change file attributes:
@@ -180,19 +190,19 @@ $ ls -l mycode.sh
 Parameters for `chmod`:
 
 ```
-User		Type		 Rights
-u - user	+ add		r - read
-g - group	- delete	w - write
-o - others			x - execute
+User        Type         Rights
+u - user    + add        r - read
+g - group    - delete    w - write
+o - others            x - execute
 a - all
 ```
 
 There is another way to change attributes using number code:
 
 ```
-User		Group		Others
-r w x		r w x		r w x
-4+2+1		4+2+1		4+2+1
+User        Group        Others
+r w x        r w x        r w x
+4+2+1        4+2+1        4+2+1
 ```
 
 ```
@@ -231,7 +241,7 @@ $ ls -l mycode.sh
 - **`zip`:** Compresses files and directories into a single file.
 
 - **`wget`**: Download files.
-
+  
   ```bash
   wget http://www.ricesuperpir.com/uploads/common/gene_annotation/NIP-T2T.gff3.gz
   gunzip -c NIP-T2T.gff3.gz | less
@@ -242,18 +252,16 @@ $ ls -l mycode.sh
 `egrep` is a command-line utility for searching plain-text data sets for lines that match a regular expression. Here are some basic functions of `egrep` in Linux with example codes:
 
 - **Search for a string in a file:** The basic syntax when searching for a single file looks like this: `egrep [options] pattern [FILE]`. For example, to search for all information for gene `AGIS_Os01g010010` in `NIP-T2T.gff3` file, you would use the following command: 
-
+  
   ```bash
   egrep AGIS_Os01g010010 NIP-T2T.gff3
   ```
-
+  
   You can use options, for example to know how many chromosomes/sequences in a fasta file:
-
+  
   ```bash
   egrep '^>' sequences.fasta | wc -l
   ```
-
-  
 
 - **Search for a string in multiple files:** To search for a string in multiple files, you can use the following command: `egrep -r "string" /path/to/directory`. This will search all files in the specified directory and its subdirectories.
 
@@ -279,8 +287,6 @@ $ ls -l mycode.sh
 - Go to the end of the line: "`$`" and pressing "Enter".
 - Replace string: `:%s/foo/bar/gc`
 
-
-
 To replace a string using `vi` in Linux, you can use the substitute command. Here is the general syntax for string substitution in `vi` editor:
 
 ```
@@ -301,8 +307,6 @@ Here is an example of how to replace all occurrences of "Nematode2" with "Nemato
 
 This command replaces all occurrences of "Nematode2" with "Nematode3" in the entire file.
 
-
-
 ### 3. Bash Programming
 
 #### 3.1 sed
@@ -310,45 +314,59 @@ This command replaces all occurrences of "Nematode2" with "Nematode3" in the ent
 The `sed` command in Linux is used to perform different operations on files such as text replacement, insertion, text search, and more. Here are some examples of how to use sed command in Linux:
 
 - Replacing or substituting string: In our `mycode.sh` job, suppose we have completed the first sample, now to process next sample:
-```bash
-$ sed 's/Nematode2/Nematode3/' mycode.sh # output to terminal
-$ cat mycode.sh
-$ sed 's/Nematode2/Nematode3/' mycode.sh > mycode2.sh
-$ sed -i 's/Nematode2/Nematode3/' mycode.sh
-```
+  
+  ```bash
+  $ sed 's/Nematode2/Nematode3/' mycode.sh # output to terminal
+  $ cat mycode.sh
+  $ sed 's/Nematode2/Nematode3/' mycode.sh > mycode2.sh
+  $ sed -i 's/Nematode2/Nematode3/' mycode.sh
+  ```
+
 - Deleting lines from a particular file: SED command can also be used for deleting lines from a particular file. SED command is used for performing deletion operation without even opening the file. Here are some examples:
-```bash
-$ sed 'nd' filename.txt # To Delete a particular line say n in this example.
-$ sed '5d' filename.txt # To delete the fifth line of filename.txt.
-```
+  
+  ```bash
+  $ sed 'nd' filename.txt # To Delete a particular line say n in this example.
+  $ sed '5d' filename.txt # To delete the fifth line of filename.txt.
+  ```
+
 - Inserting lines in a file: SED command can also be used for inserting lines in a file. Here are some examples:
-```bash
-$ sed '2i This is a new line.' filename.txt # To insert a new line at line number 2.
-$ sed '$i This is a new line.' filename.txt # To insert a new line at the end of the file.
-```
+  
+  ```bash
+  $ sed '2i This is a new line.' filename.txt # To insert a new line at line number 2.
+  $ sed '$i This is a new line.' filename.txt # To insert a new line at the end of the file.
+  ```
+
 - Printing lines from a particular file: SED command can also be used for printing lines from a particular file. Here are some examples:
-```bash
-$ sed -n 'p' filename.txt # To print all lines of filename.txt.
-$ sed -n '5p' filename.txt # To print the fifth line of filename.txt.
-```
+  
+  ```bash
+  $ sed -n 'p' filename.txt # To print all lines of filename.txt.
+  $ sed -n '5p' filename.txt # To print the fifth line of filename.txt.
+  ```
 
 #### 3.2 awk
 
 AWK is a text-editing tool that was developed by Aho, Weinberger, and Kernighan in the late 1970s. AWK can be used to do calculations as well as to edit text. Things that cannot be done with Sed can be done with AWK. Things you cannot do with AWK you can do with Perl. Things you cannot do with Perl you should ask a computer scientist to do for you.
 
 - Print the whole content of a file:
-```bash
-$ awk '{print}' NIP-T2T.gff3
-```
+  
+  ```bash
+  $ awk '{print}' NIP-T2T.gff3
+  ```
+
 - Print specific columns of a file:
-```bash
-$ awk '{print $1"\t"$3"\t"$4"\t"$5}' NIP-T2T.gff3 # To print the first, third, forth, and fifth columns.
-```
+  
+  ```bash
+  $ awk '{print $1"\t"$3"\t"$4"\t"$5}' NIP-T2T.gff3 # To print the first, third, forth, and fifth columns.
+  ```
+
 - Print a specific line of a file. For example, to get all gene positions:
-```bash
-$ awk '$3 == "gene" {print $1"\t"$3"\t"$4"\t"$5}' NIP-T2T.gff3
+  
+  ```bash
+  $ awk '$3 == "gene" {print $1"\t"$3"\t"$4"\t"$5}' NIP-T2T.gff3
+  ```
 
 $ awk 'NR==5' test-file.txt # To print the fifth line of test-file.txt.
+
 ```
 - Search for a specific word or pattern in a piece of text given:
 ```bash
@@ -360,32 +378,32 @@ $ awk '/AGIS_Os01g010010/ {print $0}' NIP-T2T.gff3 # To find all occurrences of 
 Regular expressions, often abbreviated as "regex" or "regexp," are sequences of characters that form search patterns. These are used for string matching, searching, and text manipulation (from Microsoft Copilot). Regular expressions do not work on their own. They are used together with a command or programming language, such as `egrep`, `find`, `vi`, `sed`, `awk`, `perl`, and many more. Examples (from Computational Biology, Second Edition, Röbbe Wünschiers):
 
 ```bash
-Search Pattern 		Target String
-(DNA|RNA) 		Search for “DNA” or “RNA”.
-(D|R)NA 		Search for “DNA” or “RNA”.
-[tmr]RNA 		Search for “tRNA”, “mRNA”, or “rRNA”.
-*omics 			Search for “Genomics”, or “Proteomics”, or any other “nomics”.
-b.g 			Matches any character between “b” and “g”, like big, bug, bag...
-[a-zA-Z] 		Matches any single lowercase or uppercase character.
-[˜ a-zA-Z0-9] 	        Matches any single character which is not a number or letter.
-ˆ[eE]nzyme 		Matches the words “Enzyme” or “enzyme” at the beginning of a line.
-[eE]nzyme$ 		Matches the words “Enzyme” or “enzyme” at the end of a line.
-. 			Matches any single character except the newline character.
-[ ] 			Matches any character listed between the brackets. 
-[ˆ] 			Matches any character except those listed between the brackets.
-[0–9] 			The dash (–) indicates a range of consecutive characters. 
-? 		        Matches the preceding character or list zero or one time.
-* 		        Matches the preceding character or list zero or more times.
-+ 		        Matches the preceding character or list one or more times.
-{num} 			Matches the preceding character or list num times.
-{num,} 			Matches the preceding character or list at least num times.
-{min,max} 		Matches the preceding character or list at least min times, but not more than max times. 
-ˆ 			Matches the start of a line.
-$ 			Matches the end of a line.
-\ < 			Matches the beginning of a word.
-\ > 			Matches the end of a word.
-\b 			Matches the beginning or the end of a word.
-\B 			Matches any character not at the beginning or end of a word.
+Search Pattern         Target String
+(DNA|RNA)         Search for “DNA” or “RNA”.
+(D|R)NA         Search for “DNA” or “RNA”.
+[tmr]RNA         Search for “tRNA”, “mRNA”, or “rRNA”.
+*omics             Search for “Genomics”, or “Proteomics”, or any other “nomics”.
+b.g             Matches any character between “b” and “g”, like big, bug, bag...
+[a-zA-Z]         Matches any single lowercase or uppercase character.
+[˜ a-zA-Z0-9]             Matches any single character which is not a number or letter.
+ˆ[eE]nzyme         Matches the words “Enzyme” or “enzyme” at the beginning of a line.
+[eE]nzyme$         Matches the words “Enzyme” or “enzyme” at the end of a line.
+.             Matches any single character except the newline character.
+[ ]             Matches any character listed between the brackets. 
+[ˆ]             Matches any character except those listed between the brackets.
+[0–9]             The dash (–) indicates a range of consecutive characters. 
+?                 Matches the preceding character or list zero or one time.
+*                 Matches the preceding character or list zero or more times.
++                 Matches the preceding character or list one or more times.
+{num}             Matches the preceding character or list num times.
+{num,}             Matches the preceding character or list at least num times.
+{min,max}         Matches the preceding character or list at least min times, but not more than max times. 
+ˆ             Matches the start of a line.
+$             Matches the end of a line.
+\ <             Matches the beginning of a word.
+\ >             Matches the end of a word.
+\b             Matches the beginning or the end of a word.
+\B             Matches any character not at the beginning or end of a word.
 ```
 
 Let's take an example, suppose we want to get positions of all genes from `NIP-T2T.gff3`, following a `bed` format (here is a description of `bed` format [BED File Format](https://grch37.ensembl.org/info/website/upload/bed.html)):
@@ -418,8 +436,6 @@ for i in {01..20}; do echo processing sample_${i}; mkdir sample_${i} && cd sampl
 # do not forget `cd ..`
 ```
 
-
-
 - **`while` loop:** The `while` loop is used to execute a block of code as long as a certain condition is true. Here is an example that prints the numbers 1 to 5:
 
 ```
@@ -443,8 +459,6 @@ do
     i=$((i+1))
 done
 ```
-
-
 
 - **`while read` loop:** The `while read` loop is used to read input from a file or command and execute a block of code for each line of input. Here is an example that reads lines from a file named `file.txt`:
 
@@ -471,8 +485,6 @@ AGIS_Os02g018710
 
 $ while read line; do awk -v gene=$line '$4 == gene {print $0}' NIP-T2T.gene.bed; done < mygene.list
 ```
-
-
 
 - **`for (( ))` loop:** The `for (( ))` loop is used to iterate over a range of numbers. Here is an example that prints the numbers 1 to 5:
 
@@ -507,25 +519,32 @@ esac
 Environment variables are dynamic values that affect the processes or programs running on your Linux system. They are used to store information that can be used by system processes and user applications. Here are some examples of how to use environment variables in Linux:
 
 - To view all environment variables:
-```bash
-$ printenv
-```
+  
+  ```bash
+  $ printenv
+  ```
+
 - To view the value of a specific environment variable:
-```bash
-$ echo $HOME
-```
+  
+  ```bash
+  $ echo $HOME
+  ```
+
 - To set an environment variable:
-```bash
-$ which cellranger
-# cellranger not found
-$ export PATH=/rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0/:$PATH
-$ which cellranger
-# /rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0//cellranger
-```
+  
+  ```bash
+  $ which cellranger
+  # cellranger not found
+  $ export PATH=/rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0/:$PATH
+  $ which cellranger
+  # /rds/project/rds-FTKWLWDeHys/programs/CellRanger/cellranger-7.2.0//cellranger
+  ```
+
 - To unset an environment variable:
-```bash
-$ unset VARIABLE_NAME
-```
+  
+  ```bash
+  $ unset VARIABLE_NAME
+  ```
 
 #### 3.6. A Bash Command Game
 
@@ -561,25 +580,18 @@ do
 done
 ```
 
-
-
-
 ### 4.Progam Management
 
 - Pre-compiled binaries
 - Source code
 - Bioconda - be aware of the license
-- Containers - Docker and Singularity
-
-
+- Containers - Docker and Singularity (a good learning material [here](https://epcced.github.io/2025-02-17_containers_cambridge/index.html))
 
 ### 5. Notes
 
 a, programming languages
 
 > "There are a number of such languages that are popular in bioinformatics (and in biology in general). This includes the eponymous scripting language of the GNU `bash` shell itself, `Python` and `R`. Each of these have their own strengths and weaknesses. `Bash` is ubiquitous and powerful but has a cumbersome syntax and is only really convenient for short programs. `Python` is a general purpose language with a very friendly syntax, and is nearly as ubiquitous as `Bash`. However, its ecosystem for bioinformatics analyses is relatively limited. `R` is not as prevalent as the other two but is excellent for manipulating and analyzing large amounts of data. Furthermore, it is the language of choice for bioinformatics analysis due to the large number of packages and tools it supports in this regard—especially for ‘-omics’ analyses through the Bioconductor ecosystem."   --from Raghavan et al. 20022. https://doi.org/10.1093/bib/bbab563
-
-
 
 ### **<u>Congrats, you've got 80% Linux knowledge, what's next?</u>**
 
